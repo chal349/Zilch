@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="farkle.css">
+	<script type="text/javascript" src="farkle.js"></script>
+	<title>FARKLE</title>
+</head>
+
+<body onload="initializeDice()">
+	
+		<div class="game">
+			<header class="row title_text head">FARKLE!</header>
+
+			
+			<!-- Dice images -->
+			<div class="dice_container" id="dice_disable"> 
+				<img class="dice" src="images/1.png" id="die1" data-number="0" onclick="diceClick(this)">
+				<img class="dice" src="images/2.png" id="die2" data-number="1" onclick="diceClick(this)">
+				<img class="dice" src="images/3.png" id="die3" data-number="2" onclick="diceClick(this)">
+				<img class="dice" src="images/4.png" id="die4" data-number="3" onclick="diceClick(this)">
+				<img class="dice" src="images/5.png" id="die5" data-number="4" onclick="diceClick(this)">
+				<img class="dice" src="images/6.png" id="die6" data-number="5" onclick="diceClick(this)">
+			</div>
+			
+
+			<!-- Scoring -->
+			<div class="score_container">
+				<div class="round_container">
+					<div class="row label">Round Score</div>
+					<div id="score" class="row score">0</div>
+				</div>
+				<div class="total_container">
+					<div class="row label">Total Score</div>
+					<div id="total" class="row total"> 0 </div>
+				</div>
+			</div>
+
+
+			<!-- Button row -->
+			<div class="button_row">
+				<button class="button roll" onclick="rollDiceClick()">Roll Dice</button>
+				<button class="button bank" onclick="bankClick()">Bank Score</button>
+				<!-- Instruction Modal -->
+				<button id="instructionsBtn" class="button instructions" onclick="instructionsClick()">Instructions</button>
+				<div id="instructions_modal" class="modal">
+					<div class="modal_content_instructions">
+						<img class="instructions_img" src="../images/farkle-scoresheet.png" style="width:100%;max-width:500px">
+						<span class="close">&times;</span>
+					</div>
+					
+				</div>
+			</div>
+
+
+			<!-- Farkle Modal-->
+			<div id="farkle_modal" class="modal">
+				<div class="modal_content_farkle">
+					<div class="row farkle_message_text">FARKLE!</div>
+				<button id="next_round_btn" class="button next_round">Next Round</button>
+				</div>
+			</div>
+
+		</div>
+</body>
+</html>

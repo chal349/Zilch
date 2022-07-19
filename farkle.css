@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@400;500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Permanent+Marker&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	margin-top: 48px;
+	height: 100%;
+	background-image: linear-gradient(-90deg, #2e4533, #2b482c);
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.game{
+	padding: 32px 32px 60px 32px;
+	margin: 100px auto;
+	width: fit-content;
+	background-color: rgba(0, 0, 0, 0.3);;
+	border-radius: 2%;
+	
+}
+
+.row{
+	margin:auto;
+	max-width: 100%;
+}
+
+.score_container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 60px;
+	
+}
+
+.title_text{
+	font-size: 72px;
+	text-align: center;
+	padding-bottom: 24px;
+	font-family: 'Permanent Marker', cursive;
+	color: rgb(224, 94, 94);
+	text-shadow: 2px 2px #262626;
+}
+
+.next_round{
+	margin: auto;
+}
+
+.dice_container{
+	
+	margin:0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 32px;
+	margin-bottom: 40px;
+}
+
+.dice{
+	width:80px;
+	box-shadow: 4px 4px 8px rgb(30, 29, 29);
+}
+
+
+.score, .total{
+	background-color: rgba(158, 158, 180, 0.3);
+	color: #fff;
+	height: 60px;
+	max-height:100%;
+	font-size: 40px;
+	text-align: center;
+	line-height: 60px;
+	width:120px;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	border-radius: 5px;
+}
+
+.button {
+  background-color: rgb(56, 66, 59);
+  color: white;
+  padding: 16px 24px;
+  text-align: center;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 5px;
+ 
+}
+
+.button_row{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+}
+
+button:hover{
+	background-color: rgb(96, 96, 96);
+}
+
+/*For dice that are selected*/
+.transparent{
+	opacity: 0.65;
+	background-color: rgb(255, 242, 0);
+}
+
+.label{
+	display:inline-block;
+	text-align: center;
+	vertical-align: center;
+	color: rgb(224, 94, 94);
+	font-size: 32px;
+}
+  
+/* Modal close button */
+  .close:hover,
+  .close:focus {
+	color: rgb(195, 41, 41);
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  /* The Modal (background) */
+.modal {
+	display: none; 
+	position: fixed; 
+	z-index: 1; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%; 
+	overflow: auto; 
+	background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0,0.2); 
+  }
+  
+  /* Modal Content/Box */
+  .modal_content_instructions {
+	background-color: #c2c2c2;
+	margin: 8% auto; 
+	width: fit-content; 
+	position: relative;
+	padding: 20px;
+	border-radius: 5px;
+  }
+
+  
+  /* The Close Button */
+  .close {
+	color: rgb(50, 38, 80);
+	font-size: 28px;
+	font-weight: bold;
+	position: absolute;
+	right: 16px;
+	top: 4px;
+  }
+
+  .instructions_img{
+	margin: 8px 60px;
+	box-shadow: 2px 2px 8px rgb(159, 159, 159);
+  }
+
+
+  .farkle_message_text{
+	margin: 8px 32px;
+	font-size: 60px;
+	text-shadow: 1px 1px 2px #999999;
+	text-align: center;
+	font-family: 'Permanent Marker', cursive;
+	color: rgb(224, 54, 54);
+}
+
+.modal_content_farkle {
+	background-color: #d2d0d0;
+	max-width: 700px;
+	padding: 16px;
+	border-radius: 5px;
+	margin: 3% auto; /* 15% from the top and centered */
+	width: fit-content;
+  }
