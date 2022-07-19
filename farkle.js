@@ -76,11 +76,13 @@ function scoreCheck(){
 			diceArray[i].scored = 1;
 			rollCount = 0;		
 		}
-	}		
+	}
+	// Checks for "bonus" triples and up for all values
 	for(var i=0; i < 6; i++){
 		 if(currentArray[i] >= 3){
 			bonusValue = scoreKey[(i + 1)][(currentArray[i])];
 			}
+			// Filters ones and fives from the current roll, giving them "normal" points values
 			var oneInPlay = diceArray.filter(dice => dice.clicked === 1 && dice.scored === 1 && dice.value === 1);
 			var fiveInPlay = diceArray.filter(dice => dice.clicked === 1 && dice.scored === 1 && dice.value === 5);
 
